@@ -21,5 +21,5 @@ def download_gif(url, filename):
 
 if __name__ == "__main__":
     url = input("Veuillez saisir l'URL du GIF à télécharger : ")
-    filename = "downloads/downloaded.gif"
+    filename = "uploads/downloaded.gif"
     download_gif(url, filename)
