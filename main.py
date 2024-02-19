@@ -3,8 +3,10 @@ from urllib.request import urlopen
 from tqdm import tqdm
 import validators
 
+
 def download_gif(url, filename):
     if validators.url(url):
+        
         response = urlopen(url)
         with open(filename, 'wb') as f:
             pbar = tqdm(unit="B", unit_scale=True, unit_divisor=1024)
@@ -20,6 +22,7 @@ def download_gif(url, filename):
         print("L'URL n'est pas valide.")
 
 if __name__ == "__main__":
+    
     url = input("Veuillez saisir l'URL du GIF à télécharger : ")
     filename = "uploads/downloaded.gif"
     download_gif(url, filename)
